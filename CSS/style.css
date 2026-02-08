@@ -1,0 +1,983 @@
+/*  Start Globel style */
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+:root {
+  --bgPrimary-color: rgb(0, 0, 0);
+  --bgSecondery-color: rgba(48, 48, 48, 0.664);
+  --bgTranspart-color: rgba(255, 255, 255, 0.925);
+  --textPrimary-color: rgb(255, 255, 255);
+  --textSecondery-color: rgba(241, 241, 241, 0.918);
+  --othertext-color: rgba(194, 194, 194, 0.445);
+
+}
+
+/*_____________________________________________________________________________________*/
+
+
+/*  Start Nav style */
+.navbar {
+  padding: 20px 0;
+}
+
+/* logo */
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 20%;
+  color: var(--textPrimary-color);
+}
+
+/* background */
+.navbar.custom-navbar {
+  background-color: var(--textPrimary-color);
+}
+
+/* links color */
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: var(--bgPrimary-color);
+}
+
+/* remove bootstrap active bg */
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: transparent;
+  color: var(--bgPrimary-color);
+}
+
+/* underline style */
+.custom-navbar .nav-link {
+  position: relative;
+  padding: 8px 0;
+  margin: 0 12px;
+  font-weight: 500;
+  background: none !important;
+}
+
+/* underline */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: var(--bgPrimary-color);
+  transition: width 0.3s ease;
+}
+
+/* hover + active */
+
+.custom-navbar .nav-link.active::after {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #000; /* اختياري */
+    text-align: center;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+}
+
+/*  _____________________________________________________________________________________ */
+
+
+/*  Start Header style */
+
+.Header-section {
+  height: 100vh;
+  background-image: url("../ASSEST/img_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  height: 100vh;
+  inset: 0;
+  background-color: var(--bgSecondery-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Header-section h5 {
+  color: var(--textPrimary-color);
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.typing-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 40px;
+  color: var(--textPrimary-color);
+}
+
+/* skills words*/
+.words {
+  position: relative;
+  height: 1.2em;
+  padding-left: 14px;
+  overflow: hidden;
+  width: 14ch;
+}
+
+.word {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  opacity: 0;
+  border-right: 2px solid var(--textPrimary-color);
+  animation: typing 9s steps(14, end) infinite;
+}
+
+/* display each word */
+.w1 {
+  animation-delay: 0s;
+}
+
+.w2 {
+  animation-delay: -3s;
+}
+
+.w3 {
+  animation-delay: -6s;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+
+  12% {
+    width: 12ch;
+    opacity: 1;
+  }
+
+  22% {
+    width: 12ch;
+    opacity: 1;
+  }
+
+  32% {
+    width: 0;
+    opacity: 1;
+  }
+
+  33% {
+    width: 0;
+    opacity: 0;
+  }
+
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+/* Icons */
+.header-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.header-icons a {
+  color: var(--textPrimary-color);
+  background-color: var(--bgPrimary-color);
+  border-radius: 40%;
+  font-size: 15px;
+}
+
+/*  ___________________________________________________________________________________________ */
+
+/*  Start About Me style */
+.AboutMe-section {
+  background-color: var(--textPrimary-color);
+  margin: 18px;
+  padding: 40px 30px;
+  border-radius: 10px;
+  color: var(--textSecondery-color);
+}
+
+.AboutMe-section h2 {
+  margin: 10px;
+  color: var(--bgPrimary-color);
+}
+
+.AboutMe-section p {
+  font-size: 14px;
+}
+
+/* Image box */
+.img-box {
+  position: relative;
+  display: inline-block;
+}
+
+.img-box img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Dotted background */
+.img-box::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  max-height: 300px;
+  background-image: radial-gradient(var(--textSecondery-color) 2px, transparent 2px);
+  background-size: 12px 12px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Skills */
+.skill span {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Progress Bars */
+.progress {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--textSecondery-color);
+  height: 25px;
+
+}
+
+.progress-bar {
+  height: 40px;
+  background-color: var(--bgPrimary-color);
+  color: var(--textPrimary-color);
+  font-weight: bold;
+  animation: expandWidth 1.5s ease-out forwards;
+}
+
+.progress-bar span {
+  padding-right: 50px;
+}
+
+
+/* Animation */
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: var(--target-width);
+  }
+}
+
+/* skills bar*/
+.w-80 {
+  --target-width: 80%;
+  animation-delay: 0.5s;
+}
+
+.w-90 {
+  --target-width: 90%;
+  animation-delay: 1s;
+}
+
+.w-95 {
+  --target-width: 95%;
+  animation-delay: 1.5s;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  width: 110px;
+  height: 33px;
+  font-size: 12px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-dark {
+  background-color: var(--bgPrimary-color);
+  color: var(--textPrimary-color);
+  border: none;
+}
+
+.btn-dark:hover {
+  background-color: var(--textPrimary-color);
+  color: var(--bgPrimary-color);
+  outline: auto;
+}
+
+.btn-outline-dark {
+  background-color: transparent;
+  color: var(--bgPrimary-color);
+  border: 2px solid var(--bgPrimary-color);
+}
+
+/*  ______________________________________________________________________________________________________ */
+
+/*  Start Services style */
+.services-section {
+  background-color: var(--textSecondery-color);
+  padding: 5%;
+
+}
+
+.section-title {
+  margin: 20px;
+  position: relative;
+  font-size: 36px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* Dotted background */
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 30px;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  background-image: radial-gradient(var(--bgPrimary-color) 1.5px, transparent 1px);
+  background-size: 10px 10px;
+  z-index: -1;
+}
+
+/* Service Box */
+
+.service-box {
+  background-color: var(--textPrimary-color);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px var(--textSecondery-color);
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-box p {
+  color: var(--bgSecondery-color);
+  font-size: 13px;
+}
+
+.service-box h6 {
+  font-weight: bold;
+}
+
+/* Icon */
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--textSecondery-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.35s ease;
+}
+
+.icon i {
+  font-size: 28px;
+  color: #000;
+  transition: all 0.35s ease;
+}
+
+/* hover on box */
+.service-box {
+  padding: 30px 20px;
+  border-radius: 8px;
+  transition: all 0.35s ease;
+}
+
+/* hover on box and affect in icon */
+.service-box:hover .icon {
+  background-color: var(--bgPrimary-color);
+  color: var(--textPrimary-color);
+  transform: scale(1.2);
+}
+
+/* icon color */
+.service-box:hover .icon i {
+  color: var(--textPrimary-color);
+}
+
+
+/*  _________________________________________________________________________________________________________ */
+
+/*  Start Portfolio style */
+.portfolio-section h2 {
+  position: relative;
+}
+
+/* Dotted background */
+.portfolio-section h2::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 30px;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  background-image: radial-gradient(var(--textSecondery-color) 1.8px, transparent 1px);
+  background-size: 10px 10px;
+  z-index: -1;
+}
+
+/* Hide radios */
+.portfolio-filter input {
+  display: none;
+}
+
+.portfolio-filter label {
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 15px;
+  position: relative;
+}
+
+/* Active line */
+.portfolio-filter input:checked+label::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--bgPrimary-color);
+  left: 0;
+  bottom: -6px;
+}
+
+/* Portfolio items */
+.item {
+  transition: 0.4s ease;
+}
+
+.item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* img hover */
+.portfolio-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.7);
+}
+
+/* Overlay Hover */
+.portfolio-card .overlay {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  bottom: 8px;
+  right: 8px;
+  height: 245px;
+  background: var(--bgTranspart-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .overlay {
+  opacity: 1;
+}
+
+/* contant hover */
+.overlay .category {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--bgPrimary-color);
+  text-align: center;
+}
+
+/* icons */
+.overlay .actions {
+  display: flex;
+  gap: 5px;
+}
+
+.icon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--bgPrimary-color);
+  color: var(--textPrimary-color);
+  border-radius: 50%;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.icon-btn:hover {
+  background: var(--textPrimary-color);
+  color: var(--bgPrimary-color);
+  border: 1px solid;
+
+}
+
+/* FILTER LOGIC */
+
+/* All */
+#all:checked~.portfolio-items .item {
+  display: block;
+}
+
+#brand:checked~.portfolio-items .item:not(.brand),
+#design:checked~.portfolio-items .item:not(.design),
+#graphic:checked~.portfolio-items .item:not(.graphic) {
+  display: none;
+}
+
+/* Brand */
+#brand:checked~.portfolio-items .item {
+  display: none;
+}
+
+#brand:checked~.portfolio-items .item.brand {
+  display: block;
+}
+
+/* Design */
+#design:checked~.portfolio-items .item {
+  display: none;
+}
+
+#design:checked~.portfolio-items .item.design {
+  display: block;
+}
+
+/* Graphic */
+#graphic:checked~.portfolio-items .item {
+  display: none;
+}
+
+#graphic:checked~.portfolio-items .item.graphic {
+  display: block;
+}
+
+/*  _________________________________________________________________________________________________________ */
+
+/*  Start testimonial style */
+.testimonials-section {
+  background-color: var(--textSecondery-color);
+}
+
+/* title */
+.section-title {
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 30px;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  background-image: radial-gradient(var(--bgPrimary-color) .5px, transparent 2px);
+  background-size: 10px 10px;
+  z-index: -1;
+}
+
+/* slider */
+/* Slider container */
+.testimonial-slider {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  width: 100%;
+  animation: slide 6s infinite;
+}
+
+
+/* each testimonial */
+.testimonial-content {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+/* image */
+.testimonial-img img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* text */
+.testimonial-text {
+  font-size: 15px;
+  line-height: 1.3;
+  color: var(--textPrimary-color);
+}
+
+.testimonial-content p {
+  color: var(--bgSecondery-color);
+}
+
+/* slider moves when click to dots */
+
+/* dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.dots label {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--bgSecondery-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* dot active */
+#t1:checked~.dots label[for="t1"],
+#t2:checked~.dots label[for="t2"],
+#t3:checked~.dots label[for="t3"] {
+  background-color: var(--bgSecondery-color);
+}
+
+/* slider move */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  /* 33.33% {
+    transform: translateX(0);
+  } */
+
+  /* 44.44% {
+    transform: translateX(-100%);
+  } */
+
+  /* 77.77% {
+    transform: translateX(-100%);
+  } */
+
+ 50% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+/*  ____________________________________________________________________________________________________________ */
+
+/*  Start counters style */
+.counters-section i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: var(--bgPrimary-color);
+}
+
+.counters-section h3 {
+  font-weight: bold;
+}
+
+.counters-section p {
+  color: var(--bgSecondery-color);
+  font-size: 14px;
+}
+
+
+/*  ____________________________________________________________________________________________________________ */
+
+/*  Start Our Team style */
+
+.team-section {
+  background-color: var(--textSecondery-color);
+}
+
+.team-card {
+
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.team-card .overlay {
+  position: absolute;
+  height: 80%;
+  top: 8px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background-color: var(--bgTranspart-color);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.5s ease;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card:hover .overlay {
+  opacity: 1;
+  transform: rotateY(0deg);
+
+}
+
+.team-card .info {
+  background: var(--bgSecondery-color);
+  color: var(--textPrimary-color);
+  padding: 15px;
+}
+
+.team-card .info h5 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.team-card .info span {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.SM-icon i {
+  justify-content: center;
+  align-items: center;
+
+}
+
+.SM-icon a {
+  display: inline-block;
+  background-color: var(--bgPrimary-color);
+  color: var(--textPrimary-color);
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 5px;
+
+
+}
+
+.SM-icon a:hover {
+  background-color: var(--textPrimary-color);
+  color: var(--bgPrimary-color);
+  border: 0.5px solid var(--bgPrimary-color);
+  border-radius: 50%;
+}
+
+/*  ____________________________________________________________________________________________________________ */
+
+/*  Start Contact Us style */
+.contact-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* Dotted background */
+.contact-section h2::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 30px;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  background-image: radial-gradient(var(--textSecondery-color) 1.6px, transparent 0.2px);
+  background-size: 10px 10px;
+  z-index: -1;
+}
+
+/* icons */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: var(--textSecondery-color);
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-box i {
+  font-size: 18px;
+  color: var(--bgPrimary-color);
+  transition: color 0.3s ease;
+}
+
+/* Hover icons*/
+.icon-box:hover {
+  background-color: var(--bgPrimary-color);
+  color: var(--textPrimary-color);
+}
+
+/* text */
+.contact-section h6 {
+  font-size: 15px;
+  margin-top: 15px;
+  color: var(--bgPrimary-color);
+}
+
+.contact-section p {
+  font-size: 14px;
+  color: var(--bgSecondery-color);
+}
+
+/* form */
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.fm-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: var(--textSecondery-color);
+}
+
+.fm-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: var(--textSecondery-color);
+}
+
+/* btn */
+.contact-form .btn {
+  background-color: var(--bgPrimary-color);
+  color: var(--textPrimary-color);
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-size: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background-color: var(--textPrimary-color);
+  color: var(--bgPrimary-color);
+  outline: auto;
+
+}
+
+/*  _____________________________________________________________________________________________________________ */
+
+/*  Start Footer style */
+.footer-section {
+  background: var(--bgPrimary-color);
+}
+
+.footer-section p {
+  color: var(--othertext-color);
+  font-size: 12px;
+}
+
+/*  ______________________________________________________________________________________________________________ */
+@media screen and (max-width:400px) {
+  .typing-text{
+    flex-direction: column;
+   
+
+  }
+  .words{
+    width: 10ch;
+  }
+  
+}
