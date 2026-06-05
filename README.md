@@ -39,3 +39,24 @@ Danial_Website/
 ├── css/
 ├── js/
 └── images/
+
+----
+
+
+---
+
+## 💡 Purpose
+
+This project was created to improve frontend development skills, focusing on layout design, responsiveness, and UI structure.
+
+---
+
+## 👩‍💻 Author
+
+**Anoud Alsaidi**
+
+---
+
+## ⭐ Feedback
+
+If you like this project, feel free to star it ⭐ and suggest improvements.
