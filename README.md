@@ -27,7 +27,7 @@ The website focuses on providing a smooth user experience across different devic
 
   ## 🚀 Live Preview
 
-> ([Add your GitHub Pages link here if available](https://anoudalsaidi.github.io/Danial_Website/))
+> ([Danial Website](https://anoudalsaidi.github.io/Danial_Website/))
 
   ## 📂 Project Structure
 
