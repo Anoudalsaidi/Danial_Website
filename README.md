@@ -29,18 +29,6 @@ The website focuses on providing a smooth user experience across different devic
 
 > ([Danial Website](https://anoudalsaidi.github.io/Danial_Website/))
 
-  ## 📂 Project Structure
-
-```text
-Danial_Website/
-│
-├── index.html
-├── assets/
-├── css/
-├── js/
-└── images/
-
-----
 
 
 ---
