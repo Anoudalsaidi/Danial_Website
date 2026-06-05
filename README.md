@@ -36,26 +36,6 @@ The website focuses on providing a smooth user experience across different devic
 This project was created to improve frontend development skills, focusing on layout design, responsiveness, and UI structure.
 
 ---
-
----
-
-## 💡 Purpose
-
-This project was created to improve frontend development skills, focusing on layout design, responsiveness, and UI structure.
-
----
-## 📂 Project Structure
-
-```text
-Danial_Website/
-│
-├── index.html
-├── assets/
-├── css/
-├── js/
-└── images/
-
----
 ## 👩‍💻 Author
 
 **Anoud Alsaidi**
@@ -70,6 +50,17 @@ If you like this project, feel free to star it ⭐ and suggest improvements.
 
 **Anoud Alsaidi**
 
+---
+## 📂 Project Structure
+
+```text
+Danial_Website/
+│
+├── index.html
+├── assets/
+├── css/
+├── js/
+└── images/
 ---
 
 ## ⭐ Feedback
