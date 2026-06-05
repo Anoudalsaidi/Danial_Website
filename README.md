@@ -29,7 +29,13 @@ The website focuses on providing a smooth user experience across different devic
 
 > ([Danial Website](https://anoudalsaidi.github.io/Danial_Website/))
 
+---
 
+## 💡 Purpose
+
+This project was created to improve frontend development skills, focusing on layout design, responsiveness, and UI structure.
+
+---
 
 ---
 
@@ -38,6 +44,27 @@ The website focuses on providing a smooth user experience across different devic
 This project was created to improve frontend development skills, focusing on layout design, responsiveness, and UI structure.
 
 ---
+## 📂 Project Structure
+
+```text
+Danial_Website/
+│
+├── index.html
+├── assets/
+├── css/
+├── js/
+└── images/
+
+---
+## 👩‍💻 Author
+
+**Anoud Alsaidi**
+
+---
+
+## ⭐ Feedback
+
+If you like this project, feel free to star it ⭐ and suggest improvements.
 
 ## 👩‍💻 Author
 
