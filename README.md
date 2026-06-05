@@ -24,3 +24,14 @@ The website focuses on providing a smooth user experience across different devic
 - CSS3
 - JavaScript
 - Responsive Design
+
+  ## 📂 Project Structure
+
+```text
+Danial_Website/
+│
+├── index.html
+├── assets/
+├── css/
+├── js/
+└── images/
